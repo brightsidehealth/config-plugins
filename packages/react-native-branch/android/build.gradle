@@ -9,6 +9,7 @@ buildscript {
   def expoModulesCorePlugin = new File(project(":expo-modules-core").projectDir.absolutePath, "ExpoModulesCorePlugin.gradle")
   if (expoModulesCorePlugin.exists()) {
     apply from: expoModulesCorePlugin
+    apply plugin: 'kotlin-android'
     applyKotlinExpoModulesCorePlugin()
   }
 
